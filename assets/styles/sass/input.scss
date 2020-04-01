@@ -1,0 +1,104 @@
+$prime-color: #233142;
+$second-color: #E5E5E5;
+$third-color: #F95959;
+
+$prime-font: 'Libre Franklin',
+sans-serif;
+ 
+
+
+body {
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+    font-family: $prime-font;
+    box-sizing: border-box;
+    ul {
+        list-style: none;
+    }
+    a, a:active, a:visited, a:link, a:checked {
+    text-decoration: none;
+    }
+}
+
+.block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.block__element--normal {
+    justify-self: center;
+    margin-top: 20px;
+}
+
+.block__element {
+    display: flex;
+    justify-content: space-evenly;
+}
+.block__element--start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding-left: 30px;
+}
+
+.block__element--center {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.block__element--end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.block--sm {
+    display: grid; 
+    grid-template-columns: 70% 30%;
+    padding: 20px;
+}
+
+.block--single {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+
+.block--md {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.padding {
+    padding: 40px;
+}
+
+.row {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.bg--prime {
+    color: $second-color;
+    background-color: $prime-color;
+}
+
+.bg--third {
+    color: $prime-color;
+    background-color: $third-color;;
+}
+
+.bg--image {
+    color: $second-color;
+    background: url('https://images.unsplash.com/photo-1558862771-acf0f9ab8916?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80');
+    background-size: cover;
+    height: 70vh;
+    width: 25vw;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}

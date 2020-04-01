@@ -6,18 +6,124 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title> News Post </title>
+        <meta name="description" content="News, streaming events all around the world" author="Piotr Wozniak @aka CushyCode">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/styles/sass/input.css">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
         <script src="assets/scripts/app.js" defer type="module"></script>
 
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
         
-        <script src="" async defer></script>
+        <section class="block--md bg--prime">
+            <h2 class="block__element--start" id="opening header"><a href="">This topic</a></h2>
+            <div class="block__element--center" id="weatherBox">
+                <p>ss</p>
+            </div>
+            <div class="block__element--center">
+                <span><a href=""><img class="icon" src="./assets/images/facebook.svg" alt=""></a></span>
+                <span><a href=""><img class="icon" src="./assets/images/twitter.svg" alt=""></a></span>
+                <span><a href=""><img class="icon" src="./assets/images/youtube (1).svg" alt=""></a></span>
+                <span><a href=""><img class="icon" src="./assets/images/instagram-sketched.svg" alt=""></a></span>
+                <span><a href=""><img class="icon" src="./assets/images/rss.svg" alt=""></a></span>
+            </div>
+        </section>
+
+        <header class="block--md padding">
+            <h1 class="block__element">
+                News Post
+            </h1>
+            <nav class="">
+                <ul class="block__element--center">
+                    <li class="navbar__element"><a href="">Poland</a></li>
+                    <li class="navbar__element"><a href="">World</a></li>
+                    <li class="navbar__element"><a href="">Sport</a></li>
+                    <li class="navbar__element"><a href="">Technologies</a></li>
+                    <li class="navbar__element"><a href="">Video</a></li>
+                    <li class="navbar__element"><a href="">More</a></li>
+                </ul>
+            </nav>
+            <div class="block__element--normal bg--prime">
+                <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="25">
+                <span><img class="icon" src="./assets/images/search.svg" alt=""></span>
+            </div>
+        </header>
+
+        <div class="block bg--third">
+            <h3 class="block__element--start">Urgent:</h3>
+            <p class="block__element"><a href="">Text</a></p>
+            <p class="block__element"><a href="">Text</a></p>
+            <p class="block__element"><a href="">Text</a></p>
+        </div>
+    
+        <main class="block--sm">
+            <section class="">
+                <article class="block--single">
+                    <h2>This is insane</h2>
+                </article>
+                <div class="block--md">
+                    <article>
+                        <h3>This is also insane</h3>
+                    </article>
+                    <article>
+                        <h3>This is also insane</h3>
+                    </article>
+                </div>
+
+                <article>
+                    <h2>This is really insane</h2>
+                </article>
+            </section>
+
+            <section class="">
+                <div class="block--single padding">
+                    <button>Fresh</button>
+                    <button>Popular</button>
+                </div>
+                <div class="padding">
+                    <p><a href="">news1</a></p>
+                    <p><a href="">news2</a></p>
+                    <p><a href="">news3</a></p>
+                    <p><a href="">news4</a></p>
+                </div>
+
+                <section class="row bg--image overlook padding">
+                    <h2>Your news?</h2>
+                    <p>If you are in the middle of action, send us your material</p>
+                    <form action="/my-handling-form-page" method="post">
+                        <ul class="row">
+                            <li>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="user_name">
+                            </li>
+                            <li>
+                                <label for="mail">Phone number</label>
+                                <input type="email" id="mail" name="user_mail">
+                            </li>
+                            <li>
+                                <button>Send</button>
+                            </li>
+                        </ul>
+                    </form>
+                    
+                </section>
+            </section>
+
+        </main>
+
+        <div>
+            <ul class="block__element--center">
+                <li><a href="">Contact</a></li>
+                <li><a href="">Statue</a></li>
+                <li><a href="">Cookies policy</a></li>
+                <li><a href="">Privacy policy</a></li>
+            </ul>
+        </div>
+
+        <footer class="bg--prime padding" style="text-align: center;">
+            <p>Our website uses cookies. By using News Post websites you agree to our use of cookies to provide you with convenience
+            while browsing the content of our websites. Learn more about cookies policy »</p>
+        </footer>
     </body>
 </html>
