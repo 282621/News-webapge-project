@@ -11,11 +11,258 @@ body ul {
   list-style: none;
 }
 
-body a, body a:active, body a:visited, body a:link, body a:checked {
+body a,
+body a:active,
+body a:visited,
+body a:link,
+body a:checked {
   text-decoration: none;
 }
 
+.container--socialbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  color: #E5E5E5;
+}
+
+.container--socialbar a {
+  color: #E5E5E5;
+}
+
+.container--socialbar h2 {
+  font-size: 16px;
+}
+
+.container--socialbar .block__element--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container--socialbar .block__element--social .block__element--styling {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-left: 2em;
+  width: 50%;
+}
+
+.container--navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 15% 70% 15%;
+      grid-template-columns: 15% 70% 15%;
+  padding: 5em;
+  text-align: center;
+}
+
+.container--navbar .logo {
+  width: 5vw;
+}
+
+.container--navbar .navbar__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container--navbar .navbar__element--list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container--navbar .navbar__element--link {
+  font-size: 24px;
+  color: #233142;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container--navbar .navbar__element--link a {
+  color: #233142;
+}
+
+.container--navbar .navbar__element--link:hover {
+  border-bottom: 4px solid #F95959;
+  -webkit-transform: all 0.15s;
+          transform: all 0.15s;
+}
+
+.container--navbar input[type="search"] {
+  color: #233142;
+  border: 2px solid #233142;
+  border-width: 0 0 3px;
+  background-color: transparent;
+  font-family: "Libre Franklin", sans-serif;
+  width: 15vw;
+  text-align: center;
+}
+
+.container--navbar input[type="search"]:focus {
+  color: #233142;
+  border-color: #F95959;
+  outline: none;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container--content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  -ms-grid-rows: 150vh;
+      grid-template-rows: 150vh;
+  padding: 20px;
+}
+
+.container--content .block--main {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header header" "main main side side" "footer footer footer footer";
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  padding: 2em;
+  gap: 3em;
+}
+
+.container--content .block--main .item-a {
+  text-align: match-parent;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+  background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container--content .block--main .item-b {
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container--content .block--main .item-c {
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: side;
+  background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container--content .block--main .item-d {
+  text-align: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
+  background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container--content .sidebar__element {
+  padding: 1em;
+}
+
+.container--content .sidebar__element .sidebar__element--articles {
+  margin-top: 3em;
+}
+
+.container--content .banner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: (fr)[3];
+      grid-template-rows: repeat(3, fr);
+  height: 80vh;
+  padding: 2em;
+  font-size: 24px;
+}
+
+.container--content .banner .opt {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.container--content .banner h2 {
+  font-size: 62px;
+}
+
+.container--content .banner .banner__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container--content .banner .banner__element .banner__element--opt {
+  color: #E5E5E5;
+  margin-top: 2em;
+  width: 15vw;
+  background-color: #233142;
+  border: 10px solid #233142;
+  text-align: center;
+}
+
+.container--content .banner .banner__element .banner__element--opt input[type="text"],
+.container--content .banner .banner__element .banner__element--opt input[type="email"],
+.container--content .banner .banner__element .banner__element--opt input[name="user_name"],
+.container--content .banner .banner__element .banner__element--opt input[name="user-email"] {
+  color: #E5E5E5;
+  background-color: #233142;
+}
+
 .block {
+  font-size: 11px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -25,10 +272,12 @@ body a, body a:active, body a:visited, body a:link, body a:checked {
           align-items: center;
 }
 
-.block__element--normal {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin-top: 20px;
+.block h3 {
+  font-size: 13px;
+}
+
+.block a {
+  color: #233142;
 }
 
 .block__element {
@@ -38,6 +287,12 @@ body a, body a:active, body a:visited, body a:link, body a:checked {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.block__element--normal {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 20px;
 }
 
 .block__element--start {
@@ -57,9 +312,9 @@ body a, body a:active, body a:visited, body a:link, body a:checked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .block__element--end {
@@ -77,17 +332,10 @@ body a, body a:active, body a:visited, body a:link, body a:checked {
 .block--sm {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
-  padding: 20px;
-}
-
-.block--single {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  padding: 20px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
 .block--md {
@@ -95,17 +343,35 @@ body a, body a:active, body a:visited, body a:link, body a:checked {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
-.padding {
-  padding: 40px;
+.footer {
+  padding: 2em;
 }
 
-.row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+.button {
+  border: none;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 16px;
+  padding: 1em;
+}
+
+.button--primary {
+  font-size: 28px;
+}
+
+.button--primary:hover {
+  border-bottom: 4px solid #F95959;
+  -webkit-transform: all 0.15s;
+          transform: all 0.15s;
+}
+
+.button--secondary {
+  margin-top: 2em;
+  color: #E5E5E5;
+  background-color: #F95959;
 }
 
 .bg--prime {
@@ -122,8 +388,6 @@ body a, body a:active, body a:visited, body a:link, body a:checked {
   color: #E5E5E5;
   background: url("https://images.unsplash.com/photo-1558862771-acf0f9ab8916?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80");
   background-size: cover;
-  height: 70vh;
-  width: 25vw;
 }
 
 .icon {

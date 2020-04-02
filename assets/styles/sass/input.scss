@@ -4,7 +4,7 @@ $third-color: #F95959;
 
 $prime-font: 'Libre Franklin',
 sans-serif;
- 
+
 
 
 body {
@@ -13,18 +13,228 @@ body {
     display: inline-block;
     font-family: $prime-font;
     box-sizing: border-box;
+
     ul {
         list-style: none;
     }
-    a, a:active, a:visited, a:link, a:checked {
-    text-decoration: none;
+
+    a,
+    a:active,
+    a:visited,
+    a:link,
+    a:checked {
+        text-decoration: none;
     }
 }
 
+.container--socialbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    color: $second-color;
+
+    a {
+        color: $second-color;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .block__element--social {
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .block__element--styling {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+            padding-left: 2em;
+            width: 50%;
+        }
+    }
+}
+
+.container--navbar {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 15% 70% 15%;
+    padding: 5em;
+    text-align: center;
+
+    .logo {
+        width: 5vw;
+    }
+
+    .navbar__element {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navbar__element--list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navbar__element--link {
+        font-size: 24px;
+        color: $prime-color;
+        font-family: $prime-font;
+
+        a {
+            color: $prime-color;
+        }
+    }
+
+    .navbar__element--link:hover {
+        border-bottom: 4px solid $third-color;
+        transform: all 0.15s;
+    }
+
+    input[type="search"] {
+        color: $prime-color;
+        border: 2px solid $prime-color;
+        border-width: 0 0 3px;
+        background-color: transparent;
+        font-family: $prime-font;
+        width: 15vw;
+        text-align: center;
+    }
+
+    input[type="search"]:focus {
+        color: $prime-color;
+        border-color: $third-color;
+        outline: none;
+        font-family: $prime-font;
+    }
+}
+
+.container--content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 150vh;
+    padding: 20px;
+
+    .block--main {
+        display: grid;
+        grid-template-areas:
+            "header header header header"
+            "main main side side"
+            "footer footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 2em;
+        gap: 3em;
+
+        .item-a {
+            text-align: match-parent;
+            grid-area: header;
+            background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .item-b {
+            text-align: center;
+            grid-area: main;
+            background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .item-c {
+            text-align: center;
+            grid-area: side;
+            background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .item-d {
+            text-align: center;
+            grid-area: footer;
+            background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .sidebar__element {
+        padding: 1em;
+
+        .sidebar__element--articles {
+            margin-top: 3em;
+        }
+    }
+
+    .banner {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, fr);
+        height: 80vh;
+        padding: 2em;
+        font-size: 24px;
+
+        .opt {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        h2 {
+            font-size: 62px;
+        }
+
+        .banner__element {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            .banner__element--opt {
+                color: $second-color;
+                margin-top: 2em;
+                width: 15vw;
+                background-color: $prime-color;
+                border: 10px solid $prime-color;
+                text-align: center;
+
+                input[type="text"],
+                input[type="email"],
+                input[name="user_name"],
+                input[name="user-email"] {
+                    color: $second-color;
+                    background-color: $prime-color;
+                }
+            }
+        }
+    }
+
+}
+
 .block {
+    font-size: 11px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+
+    h3 {
+        font-size: 13px;
+    }
+
+    a {
+        color: $prime-color;
+    }
+}
+
+.block__element {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .block__element--normal {
@@ -32,10 +242,6 @@ body {
     margin-top: 20px;
 }
 
-.block__element {
-    display: flex;
-    justify-content: space-evenly;
-}
 .block__element--start {
     display: flex;
     justify-content: flex-start;
@@ -45,7 +251,8 @@ body {
 
 .block__element--center {
     display: flex;
-    justify-content: space-evenly;
+    text-align: center;
+    justify-content: space-around;
 }
 
 .block__element--end {
@@ -55,30 +262,45 @@ body {
 }
 
 .block--sm {
-    display: grid; 
-    grid-template-columns: 70% 30%;
-    padding: 20px;
-}
-
-.block--single {
     display: grid;
-    grid-template-columns: 1fr;
-    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 }
 
 .block--md {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 
-.padding {
-    padding: 40px;
+.footer {
+    padding: 2em;
 }
 
-.row {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+.button {
+    border: none;
+    font-family: $prime-font;
+    font-size: 16px;
+    padding: 1em;
 }
+
+.button--primary {
+    font-size: 28px;
+}
+
+.button--primary:hover {
+    border-bottom: 4px solid $third-color;
+    transform: all 0.15s;
+}
+
+.button--secondary {
+    margin-top: 2em;
+    color: $second-color;
+    background-color: $third-color;
+}
+
+.button--secondary:hover {}
+
 
 .bg--prime {
     color: $second-color;
@@ -87,15 +309,14 @@ body {
 
 .bg--third {
     color: $prime-color;
-    background-color: $third-color;;
+    background-color: $third-color;
+
 }
 
 .bg--image {
     color: $second-color;
     background: url('https://images.unsplash.com/photo-1558862771-acf0f9ab8916?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80');
     background-size: cover;
-    height: 70vh;
-    width: 25vw;
 }
 
 .icon {
