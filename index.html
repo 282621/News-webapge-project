@@ -20,7 +20,7 @@
             <div class="block__element--social">
                 <h2 class="block__element--styling" id="opening header"><a href="">Coronavirus Craziness From Turkey</a></h2>
             </div>
-            <div class="block__element--social" id="weatherBox">
+            <div class="block__element--social" id="mainWeatherBox">
                 <div class="block__element--styling">
                     <p>Warsaw </p>
                     <p>22°C</p>
@@ -42,7 +42,7 @@
             <div class="navbar__element">
                     <img class="logo" src="./assets/images/logo.png" alt="">
             </div>
-            <nav class="navbar__element">
+            <nav class="navbar__element noneDisplay">
                 <ul class="navbar__element--list">
                     <li class="navbar__element--link"><a href="">Poland</a></li>
                     <li class="navbar__element--link"><a href="">World</a></li>
@@ -52,41 +52,66 @@
                     <li class="navbar__element--link"><a href="">More</a></li>
                 </ul>
             </nav>
-            <div class="navbar__element">
+
+            <div class="mobileWeather" id="mobileWeatherBox">
+                <div class="mobile__element">
+                    <p>Warsaw </p>
+                    <p>22°C</p>
+                    <img class="icon" src="./assets/weather/sun.svg" alt="">
+                </div>
+            </div>
+
+            <div class="hamburgermenu"></div>
+
+            <div class="navbar__element navbar__element--search">
                 <input type="search" id="search-box" placeholder="Search">
             </div>
         </header>
 
-        <div class="block bg--third">
-            <h3 class="block__element--center">Urgent:</h3>
-            <p class="block__element--start"><a href="">CoinTracker Adds 6 Industry Partnerships </a></p>
-            <p class="block__element--start"><a href="">NordVPN may be one of the best VPN services</a></p>
-            <p class="block__element--start"><a href="">HODLer Allegedly Redeems 1,000 BTC from a Physical Bitcoin - BeInCrypto</a></p>
-        </div>
+        <div class="sectionbar bg--third">
+            <div class="ss">
+                <p>Urgent:</p>
+            </div>
+                <div class="scroll news1">
+                    <div>
+                        <p class=""><a href="">CoinTracker Adds 6 Industry Partnerships </a></p>
+                    </div>
+                </div>
+                <div class="scroll news2">
+                    <div>
+                        <p class=""><a href="">CoinTracker Adds 6 Industry Partnerships </a></p>
+                    </div>
+                </div>
+                <div class="scroll news3">
+                    <div>
+                        <p class=""><a href="">CoinTracker Adds 6 Industry Partnerships </a></p>
+                    </div>
+                </div>
+        </div>        
     
         <main class="container--content">
             <section class="block--main">
                 <article class="item-a">
-                    <h2>This is insane</h2>
+                    <h2>Covid 19 coronavirus: Citizens Advice Bureau's list of curly questions - Lotto, birds, dentures, drunk landlord...</h2>
                 </article>
                 
                 <article class="item-b">
-                    <h3>This is also insane</h3>
+                    <h3>Top Investors Think Bitcoin Can Breach $20,000 In Coming 12 Months: Here’s Why</h3>
                 </article>
 
                 <article class="item-c">
-                    <h3>This is also insane</h3>
+                    <h3>Coronavirus & Bitcoin Price: Is China Losing Its BTC Mining Monopoly?</h3>
                 </article>
 
                 <article class="item-d">
-                    <h2>This is really insane</h2>
+                    <h2>Forget The Digital Dollar—The Digital Euro Is Coming</h2>
                 </article>
             </section>
 
             <section class="container--sidebar">
                 <div class="block--sm">
-                    <button class="button button--primary">Fresh</button>
-                    <button class="button button--primary">Popular</button>
+                    <button class="button button--primary"><a href="">Fresh</a></button>
+                    <button class="button button--primary"><a href="">Popular</a></button>
                 </div>
                 <div class="sidebar__element">
                     <p class="sidebar__element--articles"><a href="" id="sideArt1">In COVID-19 Scam Scramble, Cybercrooks Recycle Phishing Kits</a></p>
@@ -123,11 +148,11 @@
         </main>
 
         <div>
-            <ul class="block__element">
-                <li><a href="">Contact</a></li>
-                <li><a href="">Statue</a></li>
-                <li><a href="">Cookies policy</a></li>
-                <li><a href="">Privacy policy</a></li>
+            <ul class="ruleset">
+                <li class="ruleset__element"><a href="">Contact</a></li>
+                <li class="ruleset__element"><a href="">Statue</a></li>
+                <li class="ruleset__element"><a href="">Cookies policy</a></li>
+                <li class="ruleset__element"><a href="">Privacy policy</a></li>
             </ul>
         </div>
 

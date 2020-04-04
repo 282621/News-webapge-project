@@ -19,6 +19,135 @@ body a:checked {
   text-decoration: none;
 }
 
+.sectionbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  font-size: 16px;
+  width: 100%;
+  height: 5vh;
+  overflow: hidden;
+}
+
+.sectionbar a {
+  color: #233142;
+}
+
+.sectionbar .ss {
+  color: #233142;
+  background-color: #F95959;
+  width: 20vw;
+  z-index: 2;
+  border-right: 2px solid #233142;
+  position: absolute;
+  text-align: center;
+}
+
+.sectionbar .ss a {
+  z-index: 1;
+}
+
+.sectionbar .scroll {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sectionbar .scroll div {
+  margin-left: 2em;
+  z-index: 1;
+  color: black;
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+  -webkit-animation-delay: -20s;
+          animation-delay: -20s;
+}
+
+.sectionbar .scroll div:nth-child(2) {
+  -webkit-animation: animate2 15s linear infinite;
+          animation: animate2 15s linear infinite;
+  -webkit-animation-delay: -40s;
+          animation-delay: -40s;
+}
+
+.sectionbar .scroll div:nth-child(3) {
+  -webkit-animation: animate3 15s linear infinite;
+          animation: animate3 15s linear infinite;
+  -webkit-animation-delay: -60s;
+          animation-delay: -60s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%);
+  }
+  100% {
+    -webkit-transform: translateX(-250%);
+            transform: translateX(-250%);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%);
+  }
+  100% {
+    -webkit-transform: translateX(-250%);
+            transform: translateX(-250%);
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    -webkit-transform: translateX(600%);
+            transform: translateX(600%);
+  }
+  100% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    -webkit-transform: translateX(600%);
+            transform: translateX(600%);
+  }
+  100% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    -webkit-transform: translateX(700%);
+            transform: translateX(700%);
+  }
+  100% {
+    -webkit-transform: translateX(-450%);
+            transform: translateX(-450%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    -webkit-transform: translateX(700%);
+            transform: translateX(700%);
+  }
+  100% {
+    -webkit-transform: translateX(-450%);
+            transform: translateX(-450%);
+  }
+}
+
 .container--socialbar {
   display: -ms-grid;
   display: grid;
@@ -73,6 +202,14 @@ body a:checked {
       grid-template-columns: 15% 70% 15%;
   padding: 5em;
   text-align: center;
+}
+
+.container--navbar .mobileWeather {
+  display: none;
+}
+
+.container--navbar .hamburgermenu {
+  display: none;
 }
 
 .container--navbar .logo {
@@ -142,7 +279,9 @@ body a:checked {
       grid-template-columns: 70% 30%;
   -ms-grid-rows: 150vh;
       grid-template-rows: 150vh;
-  padding: 20px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container--content .block--main {
@@ -153,52 +292,53 @@ body a:checked {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  padding: 2em;
-  gap: 3em;
+  padding: 4em;
+  gap: 2em;
 }
 
 .container--content .block--main .item-a {
-  text-align: match-parent;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: header;
-  background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
-  background-size: contain;
+  background-image: url(https://www.newsbtc.com/wp-content/uploads/2020/04/shutterstock_1692437701-1200x780.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .container--content .block--main .item-b {
-  text-align: center;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: main;
   background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .container--content .block--main .item-c {
-  text-align: center;
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: side;
   background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .container--content .block--main .item-d {
-  text-align: center;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
   background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.container--content .block--main h2, .container--content .block--main h3 {
+  text-shadow: 2px 2px 2px black;
+  color: #E5E5E5;
 }
 
 .container--content .sidebar__element {
@@ -216,9 +356,9 @@ body a:checked {
       grid-template-columns: auto;
   -ms-grid-rows: (fr)[3];
       grid-template-rows: repeat(3, fr);
-  height: 80vh;
-  padding: 2em;
   font-size: 24px;
+  padding: 2em;
+  height: 50%;
 }
 
 .container--content .banner .opt {
@@ -259,6 +399,188 @@ body a:checked {
 .container--content .banner .banner__element .banner__element--opt input[name="user-email"] {
   color: #E5E5E5;
   background-color: #233142;
+}
+
+@media (min-width: 1px) and (max-width: 1100px) {
+  .container--socialbar,
+  .banner {
+    display: none;
+  }
+  .banner a, .banner a:visited, .banner a:active, .banner a:link, .banner a:checked {
+    color: #233142;
+  }
+  .container--navbar {
+    padding: 1em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .container--navbar .navbar__element--list,
+  .container--navbar .navbar__element--search,
+  .container--navbar .noneDisplay {
+    display: none;
+  }
+  .container--navbar .logo {
+    width: 80px;
+    height: 80px;
+  }
+  .container--navbar .mobileWeather {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container--navbar .mobileWeather .mobile__element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    padding-left: 2em;
+    width: 100%;
+  }
+  .container--navbar .hamburgermenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .block {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    height: 6vh;
+  }
+  .block .block__element--normal,
+  .block .block__element--start,
+  .block .block__element--center,
+  .block .block__element--end {
+    text-align: center;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+  .container--content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+  .container--content .block--main {
+    padding: 0;
+    margin-top: 2em;
+    gap: 2em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (fr)[4];
+        grid-template-rows: repeat(4, fr);
+        grid-template-areas: "header" "main" "side" "footer";
+  }
+  .sectionbar {
+    padding: 0.2em;
+  }
+  @-webkit-keyframes animate {
+    0% {
+      -webkit-transform: translateX(200%);
+              transform: translateX(200%);
+    }
+    100% {
+      -webkit-transform: translateX(-300%);
+              transform: translateX(-300%);
+    }
+  }
+  @keyframes animate {
+    0% {
+      -webkit-transform: translateX(200%);
+              transform: translateX(200%);
+    }
+    100% {
+      -webkit-transform: translateX(-300%);
+              transform: translateX(-300%);
+    }
+  }
+  @-webkit-keyframes animate2 {
+    0% {
+      -webkit-transform: translateX(250%);
+              transform: translateX(250%);
+    }
+    100% {
+      -webkit-transform: translateX(-400%);
+              transform: translateX(-400%);
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      -webkit-transform: translateX(250%);
+              transform: translateX(250%);
+    }
+    100% {
+      -webkit-transform: translateX(-400%);
+              transform: translateX(-400%);
+    }
+  }
+  @-webkit-keyframes animate3 {
+    0% {
+      -webkit-transform: translateX(450%);
+              transform: translateX(450%);
+    }
+    100% {
+      -webkit-transform: translateX(-450%);
+              transform: translateX(-450%);
+    }
+  }
+  @keyframes animate3 {
+    0% {
+      -webkit-transform: translateX(450%);
+              transform: translateX(450%);
+    }
+    100% {
+      -webkit-transform: translateX(-450%);
+              transform: translateX(-450%);
+    }
+  }
+}
+
+.ruleset {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  padding: 2.5em;
+  margin-top: 5em;
+}
+
+.ruleset .ruleset__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .block {
@@ -358,12 +680,20 @@ body a:checked {
   padding: 1em;
 }
 
+.button a {
+  color: #233142;
+}
+
+.button a:hover {
+  color: #233142;
+  border-bottom: 4px solid #F95959;
+}
+
 .button--primary {
   font-size: 28px;
 }
 
 .button--primary:hover {
-  border-bottom: 4px solid #F95959;
   -webkit-transform: all 0.15s;
           transform: all 0.15s;
 }

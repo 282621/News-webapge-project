@@ -5,6 +5,9 @@ $third-color: #F95959;
 $prime-font: 'Libre Franklin',
 sans-serif;
 
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
 
 
 body {
@@ -24,6 +27,91 @@ body {
     a:link,
     a:checked {
         text-decoration: none;
+    }
+}
+
+.sectionbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+    height: 5vh;
+    overflow: hidden;
+    
+    a {
+        color: $prime-color;
+    }
+
+    .ss{
+        color: $prime-color;
+        background-color: $third-color;
+        width: 20vw;
+        z-index: 2;
+        border-right: 2px solid $prime-color;
+        position: absolute;
+        text-align: center;
+
+        a {
+            z-index: 1;
+        }
+    }
+
+    .scroll {
+        width: 100%;
+        display: flex;
+    }
+
+    .scroll div {
+        margin-left: 2em;
+        z-index: 1;
+        color: black;
+        white-space: nowrap;
+        text-transform: uppercase;
+        animation: animate 15s linear infinite;
+        animation-delay: -20s;
+    }
+
+    .scroll div:nth-child(2) {
+        animation: animate2 15s linear infinite;
+        animation-delay: -40s;
+    }
+
+    .scroll div:nth-child(3) {
+        animation: animate3 15s linear infinite;
+        animation-delay: -60s;
+    }
+
+    @keyframes animate {
+        
+        0% {
+            transform: translateX(500%);
+        }
+        100% {
+            transform: translateX(-250%);
+        }
+    }
+
+    @keyframes animate2 {
+
+        0% {
+            transform: translateX(600%);
+        }
+
+        100% {
+            transform: translateX(-350%);
+        }
+    }
+
+    @keyframes animate3 {
+
+        0% {
+            transform: translateX(700%);
+        }
+
+        100% {
+            transform: translateX(-450%);
+        }
     }
 }
 
@@ -63,6 +151,14 @@ body {
     grid-template-columns: 15% 70% 15%;
     padding: 5em;
     text-align: center;
+
+    .mobileWeather {
+        display: none;
+    }
+
+    .hamburgermenu {
+        display: none;
+    }
 
     .logo {
         width: 5vw;
@@ -118,7 +214,8 @@ body {
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 150vh;
-    padding: 20px;
+    padding: 10px;
+    box-sizing: border-box;
 
     .block--main {
         display: grid;
@@ -128,39 +225,40 @@ body {
             "footer footer footer footer";
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
-        padding: 2em;
-        gap: 3em;
+        padding: 4em;
+        gap: 2em;
 
         .item-a {
-            text-align: match-parent;
             grid-area: header;
-            background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
-            background-size: contain;
+            background-image: url(https://www.newsbtc.com/wp-content/uploads/2020/04/shutterstock_1692437701-1200x780.jpg);
+            background-size: cover;
             background-repeat: no-repeat;
         }
 
         .item-b {
-            text-align: center;
             grid-area: main;
             background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
         }
 
         .item-c {
-            text-align: center;
             grid-area: side;
             background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
         }
 
         .item-d {
-            text-align: center;
             grid-area: footer;
             background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
+        }
+
+        h2, h3 {
+            text-shadow: 2px 2px 2px black;
+            color: $second-color;
         }
     }
 
@@ -176,9 +274,9 @@ body {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: repeat(3, fr);
-        height: 80vh;
-        padding: 2em;
         font-size: 24px;
+        padding: 2em;
+        height: 50%;
 
         .opt {
             width: 100%;
@@ -214,7 +312,150 @@ body {
             }
         }
     }
+}
 
+@media (min-width: 1px) and (max-width: 1100px) {
+
+    .container--socialbar,
+    .banner {
+        display: none;
+    }
+
+    .banner {
+        a, a:visited, a:active, a:link, a:checked {
+            color: $prime-color;
+        }
+    }
+
+    .container--navbar {
+        padding: 1em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .navbar__element--list,
+        .navbar__element--search,
+        .noneDisplay {
+            display: none;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .mobileWeather {
+            display: flex;
+            text-align: center;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .mobile__element {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: baseline;
+                padding-left: 2em;
+                width: 100%;
+            }
+        }
+
+        .hamburgermenu {
+            display: flex;
+        }
+    }
+
+    .block {
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+        display: grid;
+        height: 6vh;
+
+        .block__element--normal,
+        .block__element--start,
+        .block__element--center,
+        .block__element--end {
+            text-align: center;
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    
+    .container--content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 0;
+        margin: 0;
+        gap: 0;
+
+        .block--main {
+            padding: 0;
+            margin-top: 2em;
+            gap: 2em;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, fr);
+            grid-template-areas: 
+            "header"
+            "main"
+            "side"
+            "footer"
+            ;
+        }
+    }
+
+    .sectionbar {
+        padding: 0.2em;
+    }
+
+    @keyframes animate {
+
+        0% {
+            transform: translateX(200%);
+        }
+
+        100% {
+            transform: translateX(-300%);
+        }
+    }
+
+    @keyframes animate2 {
+
+        0% {
+            transform: translateX(250%);
+        }
+
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+
+    @keyframes animate3 {
+
+        0% {
+            transform: translateX(450%);
+        }
+
+        100% {
+            transform: translateX(-450%);
+        }
+    }
+
+}
+
+.ruleset {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: auto;
+    padding: 2.5em;
+    margin-top: 5em;
+
+    .ruleset__element {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
 
 .block {
@@ -282,6 +523,15 @@ body {
     font-family: $prime-font;
     font-size: 16px;
     padding: 1em;
+
+    a {
+        color: $prime-color;
+    }
+
+    a:hover {
+        color: $prime-color;
+        border-bottom: 4px solid $third-color;
+    }
 }
 
 .button--primary {
@@ -289,7 +539,6 @@ body {
 }
 
 .button--primary:hover {
-    border-bottom: 4px solid $third-color;
     transform: all 0.15s;
 }
 
@@ -299,7 +548,7 @@ body {
     background-color: $third-color;
 }
 
-.button--secondary:hover {}
+// .button--secondary:hover {}
 
 
 .bg--prime {
