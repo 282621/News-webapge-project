@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/styles/sass/input.css">
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
-        <script src="assets/scripts/app.js" defer type="module"></script>
+        <script src="./src/App/app.js" defer type="module"></script>
 
     </head>
     <body>
@@ -61,7 +61,19 @@
                 </div>
             </div>
 
-            <div class="hamburgermenu"></div>
+            <button class="hamburger">
+                <span class="hamburger__box">
+                    <span class="hamburger__inner"></span>
+                </span>
+            </button>
+
+            <div class="navigation">
+                <ul class="navigation__list">
+                    <li class="navbar__linkElement btn__secondary"><a href="#aboutMe">About me</a></li>
+                    <li class="navbar__linkElement btn__secondary"><a href="#projects">Projects</a></li>
+                    <li class="navbar__linkElement btn__secondary"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
 
             <div class="navbar__element navbar__element--search">
                 <input type="search" id="search-box" placeholder="Search">
@@ -69,7 +81,7 @@
         </header>
 
         <div class="sectionbar bg--third">
-            <div class="ss">
+            <div class="openingInfo">
                 <p>Urgent:</p>
             </div>
                 <div class="scroll news1">
