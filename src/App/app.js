@@ -1,3 +1,5 @@
+import getInfo from './Utility/getData.js';
+
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.navigation');
 
@@ -7,3 +9,5 @@ const handleClick = () => {
 };
 
 hamburger.addEventListener('click', handleClick);
+
+getInfo();
