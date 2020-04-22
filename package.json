@@ -19,5 +19,8 @@
     "sass": "^1.26.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "darkskyjs": "^0.3.0"
   }
 }

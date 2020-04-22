@@ -85,19 +85,19 @@ body {
     }
 
     .scroll div:nth-child(2) {
-        animation: animate2 15s linear infinite;
+        animation: animate2 10s linear infinite;
         animation-delay: -40s;
     }
 
     .scroll div:nth-child(3) {
-        animation: animate3 15s linear infinite;
-        animation-delay: -60s;
+        animation: animate3 100s linear infinite;
+        animation-delay: -40s;
     }
 
     @keyframes animate {
         
         0% {
-            transform: translateX(500%);
+            transform: translateX(200%);
         }
         100% {
             transform: translateX(-250%);
@@ -107,22 +107,22 @@ body {
     @keyframes animate2 {
 
         0% {
-            transform: translateX(600%);
+            transform: translateX(700%);
         }
 
         100% {
-            transform: translateX(-350%);
+            transform: translateX(-550%);
         }
     }
 
     @keyframes animate3 {
 
         0% {
-            transform: translateX(700%);
+            transform: translateX(1100%);
         }
 
         100% {
-            transform: translateX(-450%);
+            transform: translateX(-250%);
         }
     }
 }
@@ -271,7 +271,7 @@ body {
     }
 
     .sidebar__element {
-        padding: 1em;
+        // padding: 0.5em;
 
         .sidebar__element--articles {
             margin-top: 3em;
@@ -283,7 +283,6 @@ body {
         grid-template-columns: auto;
         grid-template-rows: repeat(3, fr);
         font-size: 24px;
-        padding: 2em;
 
         .opt {
             width: 100%;
@@ -321,7 +320,7 @@ body {
     }
 }
 
-@media (min-width: 1px) and (max-width: 1100px) {
+@media (min-width: 1px) and (max-width: 1200px) {
 
         .hamburger {
             padding: 10px;

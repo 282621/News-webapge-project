@@ -1,4 +1,5 @@
 import getInfo from './Utility/getData.js';
+// import getWeather from './Utility/getWeather.js';
 
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.navigation');
