@@ -80,17 +80,17 @@ body {
         color: black;
         white-space: nowrap;
         text-transform: uppercase;
-        animation: animate 15s linear infinite;
+        animation: animate 30s linear infinite;
         animation-delay: -20s;
     }
 
     .scroll div:nth-child(2) {
-        animation: animate2 10s linear infinite;
-        animation-delay: -40s;
+        animation: animate2 55s linear infinite;
+        animation-delay: -20s;
     }
 
     .scroll div:nth-child(3) {
-        animation: animate3 100s linear infinite;
+        animation: animate3 70s linear infinite;
         animation-delay: -40s;
     }
 
@@ -107,22 +107,22 @@ body {
     @keyframes animate2 {
 
         0% {
-            transform: translateX(700%);
+            transform: translateX(500%);
         }
 
         100% {
-            transform: translateX(-550%);
+            transform: translateX(-500%);
         }
     }
 
     @keyframes animate3 {
 
         0% {
-            transform: translateX(1100%);
+            transform: translateX(700%);
         }
 
         100% {
-            transform: translateX(-250%);
+            transform: translateX(-750%);
         }
     }
 }

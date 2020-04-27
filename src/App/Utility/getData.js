@@ -14,9 +14,20 @@ function getInfo() {
             const firstNewsBar = document.getElementById('firstNewsMoving');
             const secondNewsBar = document.getElementById('secondNewsMoving');
             const thirdNewsBar = document.getElementById('thirdNewsMoving');
+            const mainNews = document.getElementById('sidebarNews');
+            const mainNews2 = document.getElementById('sidebarNews2');
+            const mainNews3= document.getElementById('sidebarNews3');
+            const mainNews4 = document.getElementById('sidebarNews4');
             firstNewsBar.textContent = firstNews[0].title;
             secondNewsBar.textContent = firstNews[1].title;
             thirdNewsBar.textContent = firstNews[2].title;
+            mainNews.textContent = firstNews[3].title;
+            mainNews2.textContent = firstNews[4].title;
+            mainNews3.textContent = firstNews[5].title;
+            mainNews4.textContent = firstNews[6].title;
+            const imageUrl = firstNews[3].urlToImage;
+            const imageBack = document.getElementById('item-a');
+            imageBack.style.backgroundImage = imageUrl;
             class News {
                 constructor (name, idHtml, idNews) {
                     this.name = name;
