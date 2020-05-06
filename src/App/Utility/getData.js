@@ -11,23 +11,30 @@ function getInfo() {
             const json = JSON.parse(xhr.response);
             console.log(json);
             const firstNews = json.articles;
-            const firstNewsBar = document.getElementById('firstNewsMoving');
-            const secondNewsBar = document.getElementById('secondNewsMoving');
-            const thirdNewsBar = document.getElementById('thirdNewsMoving');
-            const mainNews = document.getElementById('sidebarNews');
-            const mainNews2 = document.getElementById('sidebarNews2');
-            const mainNews3= document.getElementById('sidebarNews3');
-            const mainNews4 = document.getElementById('sidebarNews4');
-            firstNewsBar.textContent = firstNews[0].title;
-            secondNewsBar.textContent = firstNews[1].title;
-            thirdNewsBar.textContent = firstNews[2].title;
-            mainNews.textContent = firstNews[3].title;
-            mainNews2.textContent = firstNews[4].title;
-            mainNews3.textContent = firstNews[5].title;
-            mainNews4.textContent = firstNews[6].title;
-            const imageUrl = firstNews[3].urlToImage;
-            const imageBack = document.getElementById('item-a');
-            imageBack.style.backgroundImage = imageUrl;
+
+            // const arrayList = document.getElementById('main-art');
+            // console.log(arrayList.children);
+
+            const fe = document.getElementById('item-a');
+            const se = document.getElementById('item-b');
+            const te = document.getElementById('item-c');
+            const foe = document.getElementById('item-d');
+
+            const array = [fe, se, te, foe];
+
+                for (let i = 0; i <= array.length; i++) {
+                    let myArray = array;
+                    myArray[i].children[0].textContent = firstNews[i].title;
+                    myArray[i].style.backgroundImage = `url('${firstNews[i].urlToImage}')`;
+                }
+            
+
+            // array[0].style.backgroundImage = `url('${firstNews[3].urlToImage}')`;
+            // array[1].style.backgroundImage = `url('${firstNews[4].urlToImage}')`;
+            // array[2].style.backgroundImage = `url('${firstNews[5].urlToImage}')`;
+            // array[3].style.backgroundImage = `url('${firstNews[6].urlToImage}')`;
+
+
             class News {
                 constructor (name, idHtml, idNews) {
                     this.name = name;

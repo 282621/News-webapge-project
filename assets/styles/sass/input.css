@@ -35,8 +35,8 @@ body a:checked {
 .sectionbar {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   position: relative;
   font-size: 16px;
   width: 100%;
@@ -69,7 +69,7 @@ body a:checked {
   display: flex;
 }
 
-.sectionbar .scroll div {
+.sectionbar .scroll p {
   margin-left: 2em;
   z-index: 1;
   color: black;
@@ -81,14 +81,14 @@ body a:checked {
           animation-delay: -20s;
 }
 
-.sectionbar .scroll div:nth-child(2) {
+.sectionbar .scroll p:nth-child(2) {
   -webkit-animation: animate2 55s linear infinite;
           animation: animate2 55s linear infinite;
   -webkit-animation-delay: -20s;
           animation-delay: -20s;
 }
 
-.sectionbar .scroll div:nth-child(3) {
+.sectionbar .scroll p:nth-child(3) {
   -webkit-animation: animate3 70s linear infinite;
           animation: animate3 70s linear infinite;
   -webkit-animation-delay: -40s;
@@ -313,6 +313,7 @@ body a:checked {
   background-image: url(https://www.newsbtc.com/wp-content/uploads/2020/04/shutterstock_1692437701-1200x780.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .container--content .block--main .item-b {
@@ -323,6 +324,7 @@ body a:checked {
   background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .container--content .block--main .item-c {
@@ -333,6 +335,7 @@ body a:checked {
   background-image: url(https://www.coindesk.com/wp-content/uploads/2020/04/btc-chart-apr2-1200x628.png);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .container--content .block--main .item-d {
@@ -343,6 +346,7 @@ body a:checked {
   background-image: url(https://bitcoinist.com/wp-content/uploads/2017/08/wc-bitcoin-egypt-cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .container--content .block--main h2, .container--content .block--main h3 {
@@ -514,7 +518,17 @@ body a:checked {
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
   }
-  .container--socialbar,
+  .container--socialbar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    padding: 2em;
+  }
+  .container--socialbar div:nth-child(1),
+  .container--socialbar div:nth-child(2) {
+    display: none;
+  }
   .banner {
     display: none;
   }
@@ -715,14 +729,15 @@ body a:checked {
 }
 
 .block {
-  font-size: 11px;
+  font-size: 1.2em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 20% 40% 40%;
+      grid-template-columns: 20% 40% 40%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5em;
 }
 
 .block h3 {
